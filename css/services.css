@@ -1,0 +1,113 @@
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.service {
+    background-color: rgb(19, 30, 37);
+    border-radius: 8px;
+    box-shadow: 0 52px 42px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    transition: 1s;
+    opacity: 0;
+}
+
+
+.service i{
+    color: rgb(177, 177, 177);
+}
+
+.service h3 {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.service p {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.service:nth-child(1) {
+    transform: translateX(-50%);
+}
+.service:nth-child(2) {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(0.7);
+}
+.service:nth-child(3) {
+    transform: translateX(50%);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .service {
+        width: 45%;
+    }
+    .service:nth-child(2) {
+        width: 50%; /* Make the middle container relatively larger */
+        order: 3;
+    }
+}
+
+@media (max-width: 600px) {
+    .service {
+        width: 100%;
+    }
+    .service:nth-child(2) {
+        width: 100%; /* Full width on small screens */
+        order: initial;
+    }
+}
+    /* Warning Box Container */
+    .warning-box {
+        max-width: 100%;
+        background-color: #ff4d4f; /* Bold red for high visibility */
+        color: #ffffff;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+        justify-content: center;
+    }
+
+    /* Icon styling */
+    .warning-box-icon {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+
+    /* Text styling */
+    .warning-box-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .warning-box {
+            flex-direction: column;
+            text-align: center;
+        }
+        .warning-box-icon {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        .warning-box-text {
+            font-size: 0.9rem;
+        }
+    }

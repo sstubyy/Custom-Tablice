@@ -1,0 +1,77 @@
+  /* Full screen overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Ensure overlay is above everything else */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: splitAndDisappear 2s ease-out forwards; /* Smooth animation */
+  }
+
+  
+  /* Left half of the overlay */
+  .overlay-left {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #eeeeee, #dadada);
+
+    background-color: #c3c3c3;
+    animation: moveLeft 1s ease-out forwards; /* Animation for the left side */
+  }
+
+  .overlay-left img{
+    transform: translateX(50%);
+  }
+
+  .overlay-right img{
+    transform: translateX(-50%);
+  }
+  
+  /* Right half of the overlay */
+  .overlay-right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #dadada, #acacac);
+
+    animation: moveRight 1s ease-out forwards; /* Animation for the right side */
+  }
+  
+  /* Animation for the left half to move out */
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0); /* Start in place */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left out of view */
+    }
+  }
+  
+  /* Animation for the right half to move out */
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0); /* Start in place */
+    }
+    100% {
+      transform: translateX(100%); /* Move to the right out of view */
+    }
+  }
+  

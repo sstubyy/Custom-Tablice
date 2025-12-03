@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFB Tablice Po Želji | O Nama</title>
+      <meta name="description" content="Firma NFB se bavi izradom personalizovanih tablica za vozila svih vrsta. Višegodišnje iskustvo, kvalitet i originalnost.">
+      <meta name="keywords" content="o nama, nfb, ko pravi tablice, iskustvo tablice, personalizovane tablice firma">
+      <meta property="og:title" content="O Nama | NFB - Tablice Po Želji">
+      <meta property="og:description" content="Upoznaj tim koji stoji iza sajta TablicePoZelji.rs. Naša priča, kvalitet i predanost svakoj porudžbini.">
+      <meta property="og:image" content="https://tablicepozelji.rs/img/logo.jpg">
+      <meta property="og:url" content="https://tablicepozelji.rs/o-nama">
+      <link rel="canonical" href="https://tablicepozelji.rs/o-nama">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/overlay.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Preuzimanje slika nije moguće u Instagram pretraživaču.</h2>
+            <p>Da biste otvorili ovu stranicu u vašem pretraživaču, dodirnite tri tačke ili ikonu deljenja u gornjem desnom uglu i izaberite 'Open in Browser'.</p>
+            <button id="closePopup" class="close-btn">Zatvori</button>
+        </div>
+    </div>
+    <div id="body">
+      <div id="overlay" class="overlay">
+        <div class="overlay-left">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+        <div class="overlay-right">
+          <img src="../img/logo.png" alt="Logo" />
+        </div>
+      </div>
+        <div id="header">
+            <div id="logo-cart">
+              <img src="../img/logo.png" alt="NFB Logo" />
+            </div>
+        
+            <div class="header-element" id="nav-menu">
+              <div class="links">
+                <a href="../index.html" class="navLink">Početna</a>
+                <a href="work.html" class="navLink">Radovi</a>
+                <a href="about.html" class="navLink active">O Nama</a>
+                <a href="contact.html" class="navLink">Kontakt</a>‚
+                <a class="navLink" id="cart"><i class="fa fa-shopping-cart" style="font-size: 20px;"></i></a>
+              </div>
+            <p style="position: absolute; bottom: 25px; color:rgb(120, 119, 119)" id="pipa">© 2025 NFB FRAMES & PLATES. All Rights Reserved.</p>
+
+            </div>
+
+            <div id="cart-notification">
+              <div class="notif-icon">🛒</div>
+              <div class="notif-text">
+                <strong>Dodano u korpu</strong>
+                <small>Proizvod je uspešno dodat!</small>
+              </div>
+              <button id="view-cart-btn">Pogledaj korpu</button>
+            </div>
+            
+            <button class="button-52" style="display: none;" id="add-to-cart-btn" data-value="tablica">
+              <i class="fa fa-shopping-cart fa" ></i>
+            </button>
+
+            <button class="button-52" style="display: none;" id="add-to-cart-btn2" data-value="ram">
+              <i class="fa fa-shopping-cart fa" ></i>
+            </button>
+            
+        
+            <button id="menu-button" onclick="toggleMenu()">
+              <span class="bar" id="bar1"></span>
+              <span class="bar" id="bar2"></span>
+              <span class="bar" id="bar3"></span>
+            </button>
+          </div>
+          <a class="phone-icon" id="cart1">
+            <button><i class="fa fa-shopping-cart"></i><span id="stubi"><p id="cart-numb">0</p></span></button>
+          </a>
+
+          <div id="cart-page">
+            <h1 class="cart-title">Vaša Korpa <i class="fa fa-shopping-cart" style="font-size: 20px;"></i> <i id="numb-items">(0)</i></h1>
+            <button id="cart-close">⛌</button>
+          
+            <table class="cart-table" id="cart-table">
+        
+            </table>
+
+
+            <div id="checkout-overlay">
+              <div id="checkout-section">
+                <span id="checkout-close"><i class="fas fa-times"></i></span>
+                <h2>Unesite podatke za porudžbinu</h2>
+            
+                <form id="order-form" onsubmit="return false;">
+            
+                  <!-- Podaci kupca -->
+                  <label for="cust-name">Ime i prezime *</label>
+                  <input type="text" id="cust-name" required />
+            
+                  <label for="country">Država *</label>
+                  <select id="country" required>
+                    <option value="" disabled selected>Izaberite državu</option>
+                    <option value="rs" data-code="+381">Srbija</option>
+                    <option value="ba" data-code="+387">Bosna i Hercegovina</option>
+                    <option value="si" data-code="+382">Crna Gora</option>
+                    <option value="mk" data-code="+389">Severna Makedonija</option>
+                  </select>
+            
+                  <label for="cust-phone">Telefon *</label>
+                  <div style="position: relative;">
+                    <input type="text" id="phone-code" readonly style="width: 80px; position: absolute; left: 0; top: 0; bottom: 0; border-radius: 10px 0 0 10px; border-right: none; background: #eee; padding-left: 12px; font-weight: 700; color:#555;" >
+                    <input type="text" id="cust-phone" required style="padding-left: 90px; border-radius: 0 10px 10px 0;" disabled>
+                  </div>
+            
+                  <label for="cust-email">Email *</label>
+                  <input type="email" id="cust-email" required/>
+            
+                  <!-- Sekcija za detalje isporuke -->
+                  <fieldset style="margin-top: 15px; border: 1px solid #ccc; padding: 15px; border-radius: 8px;">
+                    <legend style="padding: 0 10px; font-weight: bold;">Detalji za isporuku</legend>
+            
+                    <label for="cust-address">Ulica *</label>
+                    <input type="text" id="cust-address" placeholder="Ulica" required />
+            
+                    <label for="house-number">Broj kuće/stana *</label>
+                    <input type="text" id="house-number" placeholder="npr. 15B" required />
+            
+                    <label for="city">Grad/Mesto *</label>
+                    <input type="text" id="city" placeholder="Unesite grad" required />
+            
+                    <label for="postcode">Poštanski broj *</label>
+                    <input type="text" id="postcode" placeholder="npr. 11000" required />
+                  </fieldset>
+            
+                  <!-- Način plaćanja -->
+                  <label for="payment-method">Način plaćanja *</label>
+                  <select id="payment-method" required>
+                    <option value="Pouzecem">Pouzećem</option>
+                  </select>
+            
+                  <!-- Ukupna cena -->
+                  <label for="total-price">Ukupna cena</label>
+                  <div id="total-price">0 RSD</div>
+            
+                  <!-- Dugme za slanje -->
+                  <button id="send-order-btn" type="button">
+                    Pošalji porudžbinu <i class="fas fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+            
+            
+
+          
+          
+            <div class="cart-summary" id="cule">
+              <div class="summary-line"><span style="    font-size: 15px; color: rgb(117, 117, 117);">Cena pre popusta:</span><span style="    font-size: 15px;  color: rgb(117, 117, 117);"  id="ukupno"> /</span>
+              <br>
+              <span style=" font-size: 15px;  color: rgb(117, 117, 117);"> </span></div>
+              <hr>
+              <div class="summary-line"><span style="    font-size: 25px;">Ukupno:</span><span style="    font-size: 25px;" id="ukupnoo"> /</span></div>
+              <p style="font-size: 13px; color: rgb(100, 100, 100); margin-top: 5px;">
+                Dodajte proizvode u korpu i zatim kliknite <b>Poruči</b> da završite kupovinu.
+              </p>
+              <button class="checkout-btn" id="pay">Poruči</button>
+
+              
+            </div>
+          </div>
+          
+          <div id="alert">
+            <p>Molimo popunite sva polja.</p>
+          </div>
+
+        <section id="o-nama">
+            <div class="container2">
+                <h2 style="font-size: 2.5em; color: #007BFF; margin-bottom: 20px;">O Nama</h2>
+                    <p style="font-size: 1.2em; line-height: 1.6; color: #007BFF; margin-bottom: 40px;">
+                    Bavimo se kreiranjem personalizovanih ukrasnih tablica za vozila, idealnih za dodavanje unikatnog stila vašem prostoru. Naše tablice nisu za vožnju, već za dekoraciju.
+                </p>
+                <div class="team-wrapper" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
+                    <div class="team-box" style="flex: 1; min-width: 250px; padding: 10px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 1.5em; color: #007BFF;">Naš Tim</h3>
+                        <p style="font-size: 1em; line-height: 1.5; color: #333;">
+                            Tim čine iskusni dizajneri i zanatlije posvećeni isporuci vrhunske usluge. Svi članovi doprinose kvalitetu i inovativnosti svakog proizvoda.
+                        </p>
+                    </div>
+                    <div class="team-box" style="flex: 1; min-width: 250px; padding: 10px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 1.5em; color: #007BFF;">Naš Rad</h3>
+                        <p style="font-size: 1em; line-height: 1.5; color: #333;">
+                            Naši radovi kombinuju kvalitet i stil, koristeći vrhunske materijale i precizne tehnike štampe. Svaka tablica je pažljivo izrađena kako bi oduševila klijente.
+                    </div>
+                    <div class="team-box" style="flex: 1; min-width: 250px; padding: 10px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); color: #333;">
+                        <h3 ><h3 id="customer" style="font-weight: 1000; color: #007BFF;">0+</h3>Zadovoljnih Klijenata</h3>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <div class="where-to-find-us-container">
+            <h2>Gde nas pronaći?</h2>
+          
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info-text">
+                  <strong>Naša Adresa:</strong>
+                  <p>Kralja Petra 32, Stara Pazova, Srbija</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div class="info-text">
+                  <strong>Broj Telefona:</strong>
+                  <p>( +381 ) 69 1926 112</p>
+                </div>
+              </div>
+            </div>
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.1075654933607!2d20.275510299999997!3d44.9618072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a5f06de8158e1%3A0x5ef693fb6a6907dd!2z0JrRgNCw0ZnQsCDQn9C10YLRgNCwIEkg0JrQsNGA0LDRktC-0YDRktC10LLQuNGb0LAgMzIsINCd0L7QstC4INCR0LDQvdC-0LLRhtC4!5e0!3m2!1ssr!2srs!4v1748208460519!5m2!1ssr!2srs" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+                <i class="fa-solid fa-tags fa-2x" style="color: gold;"></i>
+                <h2>Povoljne cene</h2>
+                <p>Nudimo pristupačne cene bez kompromisa po pitanju kvaliteta. Savršen balans za svakog kupca!</p>
+                <span class="damn"></span>
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-bolt fa-2x" style="color: gold;"></i>
+              <h2>Brza i profesionalna usluga</h2>
+              <p>Naš tim brzo reaguje, poštuje rokove i pruža uslugu na visokom nivou – bez čekanja!              </p>
+              <span class="damn"></span>
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-paint-brush fa-2x" style="color: gold;"></i>
+              <h2> Potpuna personalizacija</h2>
+              <p>Svaka tablica se izrađuje prema tvojim željama – boje, tekst, dizajn, sve po meri!</p>
+              <span class="damn"></span>
+            </div>
+          </div>
+          <div class="slider-containerr">
+            <span class="slider-span" style="border-bottom-right-radius: 50%;">
+              <h2>Recenzije naših mušterija</h2>
+            </span>
+        
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                  <p class="review-text">"Tablica je odlično ispala.  Detalji su precizni, boje jake, a materijal kvalitetan. Sve pohvale, naručujem opet sigurno!"</p>
+                  <p class="customer-name">- Nikola Stanić</p>
+                  <div class="stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                  <p class="review-text">"Vrlo profesionalna usluga – lako sam napravio svoju tablicu na sajtu."</p>
+                  <p class="customer-name">- Viktor Stanković</p>
+                  <div class="stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+        
+                <div class="swiper-slide slide">
+                  <p class="review-text">"Brzo, precizno i profesionalno."</p>
+                  <p class="customer-name">- Dušan Stojanović</p>
+                  <div class="stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+        
+                <div class="swiper-slide slide">
+                  <p class="review-text">"Tablica je stigla baš onako kako sam je zamislio! Kvalitet izrade je vrhunski, a komunikacija i isporuka su bili veoma brzi. Sve preporuke!"</p>
+                  <p class="customer-name">- Marko Petrović</p>
+                  <div class="stars">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+        
+                <!-- Dodaj još ako želiš -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+        
+            <span class="slider-span" style="border-top-left-radius: 50%;"></span>
+
+            </div>
+          
+    <div id="footer">
+    <footer id="main-footer">
+        <div class="footer-container">
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <h3>Navigacija</h3>
+                <ul>
+                    <li><a href="../index.html"  class="notActive">Početna</a></li>
+                    <li><a href="about.html" class="activeLink">O nama</a></li>
+                    <li><a href="work.html" class="notActive">Radovi</a></li>
+                    <li><a href="contact.html" class="notActive">Kontakt</a></li>
+                </ul>
+            </div>
+    
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <h3>Zapratite nas</h3>
+                <div class="footer-socials">
+                  <a target="_blank" href="https://wa.me/381691926112" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/tablice_sa_natpisom_po_zelji/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/profile.php?id=100082840377288" aria-label="Instagram"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+    
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p><i class="fas fa-envelope"></i> @gmail.com</p>
+                <p><a href="tel:+381691926112"><i class="fas fa-phone"></i> +381 69 1926 112</a></p>
+                <p><a href=""><i class="fas fa-map-marker-alt"></i> Kralja Petra 32, Stara Pazova, Srbija</a></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 NFB FRAMES & PLATES. All Rights Reserved.</p>
+            <a href="https://www.instagram.com/sstubyy/" target="_blank" style="color: white;">Website by Luka Stojadinović</a>
+        </div>
+    </footer>
+    </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/about.js"></script>
+    <script src="../script/cart.js"></script>
+    <script src="../script1.js"></script>
+    <script src="../script/nav.js"></script>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+  const card = Array.from(document.getElementsByClassName("card"));
+
+function checkVisibility() {
+    card.forEach(c => {
+        const rect = c.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.9) {
+            c.classList.add("visible");
+        }
+    });
+}
+
+
+window.addEventListener("scroll", checkVisibility);
+window.addEventListener("load", checkVisibility);
+  
+    </script>
+</body>
+</html>

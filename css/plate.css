@@ -1,0 +1,736 @@
+
+@font-face {
+    font-family: 'Tablica';
+    src: url('../assets/eurov5.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#license-plate-maker {
+    margin: auto;
+    padding-bottom: 100px;
+    background-color:     rgb(255, 255, 255);
+    display: flex;
+    margin: 0px 100px;
+}
+
+#part1,#part2{
+    width: 50%;
+}
+
+
+.image{
+    margin: 0 15px;
+}
+
+#license-plate-maker h2 {
+    transition: 0.2s;
+    -webkit-text-stroke: 1px ;
+}
+
+#license-plate-maker h1 {
+    margin-top: 0;
+    font-size: 60px;
+    -webkit-text-stroke: 2px #ffffff;;
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: 2s;
+    font-family: "poppins";
+    font-weight: 100;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.plate-options {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    margin-top: 20px;
+}
+
+
+
+.plate-options p{
+    margin: 0;
+}
+
+.plate-container-element{
+    margin-top: 15px;
+    position: sticky;
+    top: 240px;
+}
+
+.button-51 {
+    border: 2px solid #007BFF;
+    background-color: transparent;
+    color: #007BFF;
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .button-51:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+  }
+  
+
+@media (min-width: 768px) {
+  .button-51 {
+    padding: 16px 32px;
+  }
+}
+
+#plate-text {
+    font-size: 18px;
+    padding: 10px 15px;
+    width: 250px;
+    font-weight: bold;
+    background: linear-gradient(145deg, rgba(0, 123, 255, 0.519), rgba(255, 255, 255, 0.8));
+    border: none;
+    border-top: 3px solid rgba(0, 123, 255, 0.8);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.icon-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon-button {
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.icon-button:hover,
+.icon-button:focus {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+
+
+#custom-plate {
+    align-items: center;
+    width: 565px;
+    height: 110px;
+    transform: scale(0.8);
+    margin-left: -50px;
+}
+
+#custom-plate2 {
+    align-items: stretch;
+    display: none; flex-direction: column;
+    width: 250px;
+    height: 250px;
+    transform: scale(0.8);
+    margin-left: -25px;
+}
+
+#custom-plate3 {
+    align-items: stretch;
+    display: none; flex-direction: column;
+    width: 250px;
+    height: 250px;
+    transform: scale(0.8);
+    margin-left: -25px;
+}
+
+
+.motor1{
+    height: 50%;
+}
+
+.motor{
+    height: 50%;
+    text-align: center;
+}
+
+.motor span{
+    text-align: center;
+    width: 100%;
+}
+
+.plate, .plate1{
+    display: flex;
+    font-size: 24px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid black; /* Inner border */
+    box-shadow: 
+        0 0 0 4px rgb(83, 83, 83),  /* Middle border */
+        0 0 0 8px rgb(0, 0, 0),
+        0 32px 52px rgba(22, 3, 225, 0.4);  /* Outer border */
+    transition: 0.2s;
+
+}
+
+
+.plate1 h2{
+    font-family: Tablica;
+    margin-left: 30px;
+    font-size: 44px;
+}
+
+.plate-display img{
+
+}
+
+.srbO{
+    transition: 0.2s; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
+    justify-content: flex-end; 
+    background-color: #0c2c83;
+    padding-right: 10px; 
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+#dim{
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.srbO p{
+    margin: 0;  font-family: 'Tablica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: white; margin-bottom: 5px; transition: 0.2s;
+}
+
+.left-plate-text-display{
+    width: auto;  font-family: 'Tablica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.right-plate-text-display{
+    text-align: right;  font-family: 'Tablica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 12px; 
+}
+
+.middle-plate-text-display{
+    margin: 0;  font-family: 'Tablica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+.element{
+    display: flex; flex-direction: column; gap: 0;
+}
+
+span{
+    font-size: 50px;
+}
+
+.plate-options{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(111, 110, 110);
+    margin-left: 5px;
+}
+
+.plate-options div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.plate-options div p{
+    background-color: #0c2c83;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+
+.plate-options input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.plate-options input[type="text"] {
+    font-size: 26px;
+    padding: 10px 12px;
+    height: 50px;
+    width: 300px;
+    color: #000000; /* Lighter color for text contrast */
+    font-weight: bold;
+    background: linear-gradient(145deg, #ffffff, #ffffff);
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Tablica', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.plate-options input[type="text"]:focus {
+    outline: none;
+    background: linear-gradient(145deg, #ffffff 50%, #ffffff);
+    border: 1px solid #2483e8; /* Darker border */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4); /* Slight blue glow */
+}
+
+#forward{
+    display: flex; justify-content:flex-start;
+    gap: 40px;
+}
+
+#forward button{
+    margin: 0;
+}
+
+.plate-display {
+    position: sticky;
+    z-index: 2;
+}
+
+@media screen and (max-width:950px){
+    #license-plate-maker h1 {
+        font-size: 40px;
+    }
+    #custom-plate2{
+        transform: scale(0.5);
+        margin-left: -50px;
+    }
+    .plate-display{
+        height: 20%;
+        width: 20%;
+    }
+    #custom-plate{
+        transform: scale(0.5);
+    }
+    #custom-plate{
+        margin-left: -130px;
+    }
+    #license-plate-maker{
+        flex-direction: column;
+        margin: 0px 10px;
+    }
+    #part1,#part2{
+        width: 100%;
+    }
+
+    #custom-plate3{
+        transform: scale(0.5);
+        margin-left: -50px;
+        margin-left: -85px;
+    }
+    
+    
+}
+
+
+.container{
+    margin: auto;
+    padding: 20px;
+    border-radius: 50px;
+    overflow: visible;
+}
+
+@media screen and (max-width:450px){
+    .plate-display {
+        top: 70px /* Adjust this value to control where the element sticks */
+    }
+    .plate-displayy {
+        top: 70px /* Adjust this value to control where the element sticks */
+    }
+    .container{
+        margin: auto;
+        padding: 0px;
+        border-radius: 50px;
+        overflow: visible;
+    }
+    #custom-plate{
+        margin-left: -130px;
+    }
+    
+}
+
+.modern-select-container {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.modern-select-container:hover {
+    background-color: #f0f0f0;
+    border-color: #888;
+}
+
+.modern-select-container:active {
+    background-color: #eaeaea;
+}
+
+.modern-select-container::after {
+    content: "▾";
+    font-size: 14px;
+    color: #666;
+    pointer-events: none;
+}
+
+#close-select{
+    position: fixed;
+    top: 25px;
+    right: 50px;
+    font-size: 25px;
+    color:white;
+}
+
+.selected{
+    background-color: #f2f2f2;
+}
+
+
+  .modern-select-display {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .modern-select-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modern-select-options {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  .option {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.2s;
+  }
+
+  .option:last-child {
+    border-bottom: none;
+  }
+
+  .option:hover {
+    background-color: #f2f2f2;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+
+.custom-box {
+    background-color: #ffffff; /* Light blue background */
+    border: 2px solid #000000; /* Blue border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    color: #333; /* Dark text */
+    text-align: center;
+    transition: 0.2s;
+}
+
+.custom-box:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
+}
+
+
+.custom-box h2 {
+    font-size: 1.2rem;
+    color: #343333; /* Blue text */
+    margin: 0;
+    font-weight: lighter;
+}
+
+
+#symbols{
+    font-family: "arial";
+    margin-left: 5px;
+    width: 90%;
+}
+
+#icons button{
+    font-family: "Tablica";
+}
+
+  #symbols p {
+    font-weight: bold;
+  }
+  #symbols > div:first-of-type {
+    margin-bottom: 1rem;
+  }
+  #symbols button {
+    padding: 0.52rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  #symbols button.active {
+    background-color: #0066ff;
+    color: white;
+    border-color: #0066ff;
+  }
+  #icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  #icons button {
+    width: 37px;
+    height: 37px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+ #color-name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+ }
+ .color-picker {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 5px;
+    margin-top: 10px;
+    max-width: 75%;
+    padding-bottom: 6px;
+  }
+  
+  /* Optional: nice scrollbars */
+  .color-picker::-webkit-scrollbar {
+    height: 6px;
+  }
+  .color-picker::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+  
+  .color-box {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border 0.2s ease;
+    flex-shrink: 0; /* 👈 important to prevent shrinking */
+  }
+  
+  .color-box.selected {
+    transform: scale(1.1);
+    border: 3px solid rgb(93, 163, 244);
+  }
+  
+.manyLeft{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+
+.why-choose-us {
+    padding: 40px;
+    max-width: 1400px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .why-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .why-left, .why-right {
+    flex: 1 1 300px;
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  
+  .why-left ul {
+    list-style-type: circle;
+    padding-left: 20px;
+  }
+  
+  .why-left li {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .why-right p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .design-select {
+    display: flex;
+    gap: 12px;
+    justify-content: left;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .design-select label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    color: #444;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  
+  .design-select label:hover {
+    background-color: #f0f0f0;
+    border-color: #888;
+  }
+  
+  .design-select input[type="radio"] {
+    display: none;
+  }
+  
+  .design-select input[type="radio"]:checked + label {
+    background-color: #0066ff;
+    color: white;
+    border-color: #0052cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
+  }
+  
+  /* Fix for structure: radio must be before label text */
+  .design-select label:has(input[type="radio"]:checked) {
+    background-color: #0066ff;
+    color: white;
+    border-color: #0052cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
+  }
+  
+  
+
+  #close-select{
+    cursor: pointer;
+  }
+
+  /* --- Cart Add Button --- */
+.button-52 {
+  background: white;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 3px;
+}
+
+.button-52:hover {
+  background: #333;
+  color: white;
+}
+
+/* Click Animation (added state) */
+.button-52.added {
+  background: #27ae60;
+  border-color: #27ae60;
+  color: #27ae60;
+  transform: scale(1.1);
+}
+
+/* Checkmark overlay when added */
+.button-52.added::after {
+  content: "\f00c"; /* Font Awesome checkmark */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  font-size: 22px;
+  color: white;
+  animation: popIn 0.3s ease forwards;
+}
+
+/* Small pop animation */
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}

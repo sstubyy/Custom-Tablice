@@ -1,0 +1,201 @@
+#o-nama{
+    padding: 60px 20px; text-align: center;
+}
+
+.container2{
+    max-width: 800px; margin: 0 auto;
+    box-shadow: 0 32px 34px rgba(17, 100, 255, 0.4);
+    border-radius: 50px;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 1s;
+    margin-top: 100px;
+}
+
+.container2 h1{
+    font-size: 50px;
+   color: #ffffff; margin-bottom: 20px;
+}
+
+
+#o-nama h2 {
+    font-size: 2em;
+    color: #000000;
+}
+
+#o-nama .team-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#o-nama .team-box {
+    flex: 1 1 calc(50% - 40px); /* Adjusting flex basis for responsive design */
+    margin: 10px 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #o-nama h2 {
+        font-size: 1.8em;
+    }
+
+    #o-nama .team-box {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        padding: 15px;
+    }
+
+    #o-nama p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #o-nama h2 {
+        font-size: 1.5em;
+    }
+
+    #o-nama p {
+        font-size: 0.9em;
+    }
+
+    #o-nama .team-box {
+        padding: 10px;
+    }
+}
+
+
+#o-radovima {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#o-radovima h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    box-shadow: 0 32px 34px rgba(17, 100, 255, 0.4);
+    border-radius: 50px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    padding: 30px 0;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+.cta-text {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007BFF;
+    text-align: center;
+}
+
+.cta-text a {
+    color: #FF5733;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cta-text a:hover {
+    color: #FF4500;
+}
+
+  /* "Where to Find Us" Container */
+  .where-to-find-us-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: #333;
+  }
+  
+  .where-to-find-us-container h2 {
+    text-align: center;
+    color: #0078ff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  /* Contact Info Styling */
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+  
+  .info-item i {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #0078ff;
+  }
+  
+  .info-text {
+    font-size: 1rem;
+  }
+  
+  .info-text strong {
+    display: block;
+    font-weight: bold;
+  }
+  
+  /* Responsive iframe for the map */
+  .map-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .info-item {
+      flex: 1 1 100%; /* Stack the contact info on smaller screens */
+      max-width: 100%;
+    }
+  }
+  

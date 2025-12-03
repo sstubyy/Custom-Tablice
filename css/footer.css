@@ -1,0 +1,223 @@
+#footer {
+    background: 
+    rgb(19, 30, 37);
+}
+
+  
+    
+    .contact-section {
+      padding: 80px 20px;
+    }
+    
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+   #contact h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #ededed;
+      border-bottom: 2px solid #ff8c00;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    
+    .contact-form {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      background-color: #eaeaea;
+      border: 1px solid #5f5f5f;
+      border-radius: 8px;
+      color: #000000;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #000000;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #ff8c00;
+      background-color: #cdcdcd;
+    }
+    
+    .form-group textarea {
+      height: 150px;
+      resize: none;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: #ff8c00;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+      background-color: #e67e00;
+    }
+    
+    @media (max-width: 768px) {
+      #contact h2 {
+        font-size: 2rem;
+      }
+      .contact-container {
+        padding: 0 15px;
+      }
+    }
+  
+    @media screen and (max-width: 568px) {
+  
+      .service-items {
+          flex-direction: column;
+      }
+  
+      .service-item {
+          margin: 1rem 0;
+      }
+  }
+    
+  
+  
+  /* Footer Styling */
+  #main-footer {
+      color: white;
+      padding: 3rem 2rem;
+      text-align: left;
+      background-color: rgb(0, 0, 0, 0.2);
+  }
+  
+  .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      text-align: center;
+  }
+  
+  .footer-container div {
+      flex: 1 1 30%;
+      margin: 1rem 0;
+  }
+  
+  .footer-container h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+  }
+  
+  .footer-container p,
+  .footer-container a {
+      color: #ccc;
+      font-size: 1rem;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+  }
+  
+  .footer-container p i {
+      margin-right: 0.5rem;
+      color: orange;
+  }
+  
+  
+  
+  /* Footer Links */
+  .footer-links ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  .footer-links ul li {
+      margin-bottom: 0.5rem;
+  }
+  
+  .footer-links ul li a {
+      transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+      color: #f0a500;
+  }
+  
+  /* Social Media Icons */
+  .footer-socials{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-social img {
+    width: 30px;
+  }
+  
+  
+  .footer-social a {
+  
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+      color: rgb(204, 204, 204);
+      transition: color 0.3s ease;
+  }
+  
+  
+  /* Contact Info */
+  .footer-contact p {
+      margin-bottom: 0.5rem;
+  }
+  
+  /* Bottom Footer */
+  .footer-bottom {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+  }
+  
+  .footer-bottom p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #999;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+      .footer-container {
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .footer-container div {
+          flex: 1 1 100%;
+      }
+  
+      .footer-container div:not(:last-child) {
+          margin-bottom: 2rem;
+      }
+  
+      .footer-social a {
+          margin-right: 1rem;
+      }
+  }

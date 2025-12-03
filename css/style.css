@@ -1,0 +1,771 @@
+body{
+  font-family: "poppins";
+  margin: 0;
+}
+
+.phone-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 10;
+  background-color: rgb(157, 157, 157);
+  color: white;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: bounce1 2s infinite;
+  text-decoration: none;
+  font-size: 25px;
+  transition: background-color 0.3s ease;
+}
+
+#stubi{
+  position: absolute;
+  font-size: 12px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 10px;
+  margin-left: -10px;
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -15px;
+  border: 2px solid rgb(157, 157, 157);;
+  text-align: center;
+}
+
+#stubi p{
+  position: absolute;
+  top: -27%;
+  left: 37%;
+}
+
+.phone-icon button{
+  background-color: transparent;
+  color: white;
+  font-size: 19px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.phone-icon i{
+  animation: 2s infinite ringing;
+}
+
+/* Bounce Animation: Bounces the element like a ball, ideal for animated loaders or playful effects. */
+@keyframes bounce1 {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+@font-face {
+    font-family: "title-font";
+    src: url("../assets/stubili/stubili.ttf");
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("../assets/poppins.extralight.ttf");
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.landing-container {
+position: relative;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 60px 40px;
+min-height: 100vh;
+text-align: left;
+color: white;
+overflow: hidden;
+background-color: white;
+}
+
+#background-img {
+object-fit: cover;
+height: 100vh;
+overflow: hidden;
+z-index: 0;
+position: absolute;
+transition: 0.5s;
+filter: brightness(0.4);
+width: 100vw;
+position: absolute;
+left: 0;
+}
+
+
+
+.landing-content {
+position: relative;
+z-index: 1;
+max-width: 700px;
+margin-left: 80px;
+}
+
+.landing-image{
+width: 80%;
+margin-bottom: 40px;
+animation: fadeInUp 1.2s ease forwards;
+}
+
+.landing-subtitle {
+font-size: 1.8rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 100;
+margin: 0;
+color: black;
+font-family: "poppins";
+animation: fadeInUp 1.4s ease forwards;
+}
+
+.landing-catchphrase {
+font-size: 1.2rem;
+color: black;
+margin-top: 0;
+margin-bottom: 25px;
+font-family: "poppins";
+animation: fadeInUp 1.8s ease forwards;
+}
+
+
+#hero-info p{
+  color: rgb(255, 255, 255);
+  background-color: rgba(86, 86, 86, 0.52);
+  border-radius: 15px;
+  animation: fadeInLeft 1.8s ease forwards;
+  text-align: center;
+  padding: 5px;
+}
+
+#hero-info a{
+  text-decoration: none;
+  color: white;
+}
+
+.see-more-btn {
+padding: 12px 24px;
+font-size: 1rem;
+border: none;
+border-radius: 25px 0;
+background: transparent;
+font-family: "poppins";
+border: 1px solid rgb(0, 0, 0);
+color: rgb(0, 0, 0);
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s ease;
+margin-bottom: 30px;
+animation: fadeInUp 2s ease forwards;
+}
+
+.see-more-btn:hover {
+background: #000000;
+color:rgb(255, 255, 255);
+transform: translateY(-2px);
+}
+
+.landing-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 1.5rem;
+  animation: fadeInLeft 1.4s ease forwards;
+  margin-bottom: 40px;
+}
+
+.landing-icons a,
+.landing-icons .address {
+color: rgb(0, 0, 0);
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+
+.address span {
+font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+.landing-container {
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+.landing-content {
+  margin-left: 0;
+  text-align: center;
+}
+
+.landing-icons {
+  justify-content: center;
+}
+
+.landing-image{
+  width: 60%;
+  margin-bottom: 30px;
+}
+}
+
+
+.toggle-buttons{
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+}
+
+.toggle-buttons button{
+border-radius: 50%;
+width: 10px;
+height: 40px;
+background-color: silver;
+transform: scale(0.4);
+}
+
+.toggle-buttons .active{
+background-color: rgb(100, 100, 100);
+transform: scale(0.5);
+}
+
+.overlay-lines {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+pointer-events: none;
+z-index: 1;
+overflow: hidden;
+}
+
+.overlay-lines::before {
+content: '';
+position: absolute;
+width: 100vw;
+height: 100vh;
+background-image: 
+  repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 20px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0, 0.1) 0px,
+    rgba(0,0,0, 0.1) 1px,
+    transparent 1px,
+    transparent 30px
+  );
+animation: moveLines 20s linear infinite;
+}
+
+@keyframes moveLines {
+0% {
+  background-position: 0 0, 0 0;
+}
+100% {
+  background-position: 100px 100px, 0 200px;
+}
+}
+
+
+.bouncy-arrows {
+position: absolute;
+bottom: 30px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+gap: 20px;
+z-index: 1;
+pointer-events: none;
+}
+
+.arrow {
+width: 20px;
+height: 20px;
+border-left: 4px solid rgba(0, 0, 0, 0.6);
+border-bottom: 4px solid rgba(38, 38, 38, 0.6);
+transform: rotate(-45deg);
+animation: bounce 1.5s infinite;
+opacity: 0.8;
+}
+
+.delay-1 {
+animation-delay: 0.2s;
+}
+.delay-2 {
+animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+0% {
+  transform: translateY(0) rotate(-45deg);
+  opacity: 0.5;
+}
+50% {
+  transform: translateY(10px) rotate(-45deg);
+  opacity: 1;
+}
+100% {
+  transform: translateY(0) rotate(-45deg);
+  opacity: 0.5;
+}
+}
+
+
+#tiktok{
+    width: 30px;
+}
+
+.card{
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #121212;
+  border-radius: 15px;
+  color: white;
+  overflow: hidden;
+  max-height: 600px;
+  box-shadow: 4px 12px 9px rgb(0, 0, 0);
+  transition: 1s;
+  font-family: "poppins";
+}
+
+.card p{
+  color: rgb(174, 174, 174);
+  margin-top: 8px;
+}
+
+.card img{
+  width: 100%;
+  filter: brightness(0.7);
+}
+
+
+.damn{
+  display: inline-block;
+  width: 200px;
+  height: 2px;
+  background-color: #D4AF37;
+  margin-top: 30px;
+}
+
+
+.card {
+  width: 400px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color:     rgb(19, 30, 37);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.card:nth-child(1){
+  transform: translateX(-10%);
+}
+
+.card:nth-child(2){
+  transform: translateY(10%);
+}
+
+.card:nth-child(3){
+  transform: translateX(10%);
+}
+
+
+.card.visible {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 100px 20px;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media screen and (max-width:1000px){
+  .card-container{
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 60px 10px;
+  }
+}
+
+
+
+.slider-containerr {
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid white;
+}
+
+.slider-containerr h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.slider-span {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.slide {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-text {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.customer-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.fa-star {
+  color: #ffcc00;
+  font-size: 20px;
+  margin: 0 2px;
+}
+
+.fa-star:hover {
+  color: #ff9900;
+}
+
+@media screen and (max-width:800px){
+  .phone-icon{
+    display: flex;
+  }
+}
+
+
+  #checkout-section {
+    max-width: 520px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  }
+  #checkout-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #222;
+  }
+  #checkout-section form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+  }
+  /* Icons for labels */
+  label[for="cust-name"]::before { content: "\f007"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="cust-phone"]::before { content: "\f095"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="country"]::before { content: "\f57d"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="cust-address"]::before { content: "\f3c5"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="cust-number"]::before { content: "\f133"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="postcode"]::before { content: "\f15b"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="payment-method"]::before { content: "\f09d"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="total-price"]::before { content: "\f155"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+  label[for="cust-email"]::before { content: "\f0e0"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: #777;}
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #2a9df4;
+    box-shadow: 0 0 8px rgba(42,157,244,0.4);
+  }
+
+  #send-order-btn {
+    margin-top: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(37,99,235,0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #send-order-btn i {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  #send-order-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    box-shadow: 0 8px 20px rgba(30,64,175,0.8);
+  }
+  #total-price {
+    font-weight: 700;
+    font-size: 18px;
+    background: #f0f4ff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin-bottom: 25px;
+    color: #0d47a1;}
+
+/* Overlay pozadina */
+#checkout-overlay {
+  display: none; /* pocetno sakriven */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  z-index: 9998;
+}
+
+/* Modal container */
+#checkout-section {
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh; /* ogranicenje visine da ne viri */
+  background: #fff;
+  margin: 50px auto; /* vertikalno i horizontalno centriranje */
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto; /* skrol ako je previse sadrzaja */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Dugme za zatvaranje */
+#checkout-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#checkout-close:hover {
+  color: #000;
+}
+
+/* Naslovi */
+#checkout-section h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Polja forme */
+#checkout-section label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#checkout-section input,
+#checkout-section select,
+#checkout-section textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+#checkout-section textarea {
+  resize: vertical;
+}
+
+/* Dugme */
+#send-order-btn {
+  margin-top: 18px;
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+#send-order-btn:hover {
+  background: #e68900;
+}
+
+/* Animacija ulaska */
+@keyframes fadeIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive - mobilni */
+@media (max-height: 500px) {
+  #checkout-section {
+    margin: 20px auto;
+    max-height: 85vh;
+  }
+}
+
+#alert{
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -150%);
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#alert button{
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+#alert p{
+  margin: 2px;
+}
+
+#pipa{
+  display: none;
+}
+
+@media screen and (max-width: 900px){
+  #pipa{
+    display: inline;
+  }
+}
+

@@ -1,0 +1,253 @@
+#cart-page {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    font-family: 'Segoe UI', sans-serif;
+    padding-bottom: 30px;
+  }
+  
+  /* Title */
+  .cart-title {
+    text-align: center;
+    font-size: 26px;
+    margin: 20px 0;
+  }
+  
+  /* Close button */
+  #cart-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    border: none;
+    background: none;
+    color: #888;
+    cursor: pointer;
+  }
+  #cart-close:hover {
+    color: #333;
+  }
+  
+  /* Table layout for desktop */
+  .cart-table {
+    width: 85%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: auto;
+  }
+  .cart-table th {
+    text-align: left;
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  .cart-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+  }
+  .product-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .product-info img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .qty-control {
+    display: flex;
+    align-items: center;
+  }
+  .qty-control button {
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+  }
+  .qty-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  .remove-item {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    cursor: pointer;
+  }
+  .remove-item:hover {
+    color: red;
+  }
+  
+  /* Summary */
+  .cart-summary {
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: 8%;
+  }
+  .checkout-btn {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 14px;
+    border: none;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .checkout-btn:hover {
+    background: #333;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 750px) {
+    /* Stack summary below table */
+    .cart-summary {
+      position: relative;
+      margin: 20px auto 0 auto;
+      max-width: 90%;
+    }
+  }
+  
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+        #tr{
+            display: none;
+        }
+      }
+
+  @media (max-width: 600px) {
+    .cart-table,
+    .cart-table thead,
+    .cart-table tbody,
+    .cart-table th,
+    .cart-table td,
+    .cart-table tr {
+      display: block;
+      width: 100%;
+    }
+  
+    /* Hide header row */
+    .cart-table thead {
+      display: none;
+    }
+  
+    /* Card style rows */
+    .cart-table tr {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: white;
+    }
+  
+    .cart-table td {
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+    }
+  
+    /* Labels for mobile */
+    .cart-table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #555;
+    }
+  
+    /* Product details stacked */
+    .product-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .product-info img {
+      max-width: 120px;
+      height: auto;
+    }
+  
+    /* Keep remove icon aligned */
+    .remove-item {
+      justify-content: flex-end;
+    }
+  }
+  
+  /* Dugme za dodavanje u korpu */
+
+  
+  /* Notifikacija */
+  #cart-notification {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: white;
+    color: black;
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    transform: translateY(150%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 200;
+    min-width: 280px;
+  }
+  
+  /* Ikonica */
+  .notif-icon {
+    font-size: 20px;
+  }
+  
+  /* Tekst */
+  .notif-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .notif-text strong {
+    font-size: 15px;
+    color: #111;
+  }
+  .notif-text small {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Dugme unutar notifikacije */
+  #cart-notification button {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+  }
+  #cart-notification button:hover {
+    background: #333;
+  }
+  
+  /* Aktivno */
+  #cart-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
